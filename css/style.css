@@ -1,0 +1,70 @@
+.menu{
+width:320px;
+height:100%;
+position:absolute;
+left:-320px;
+background:white; 
+border:2px solid green;  
+z-index: 2; 
+}
+.title{
+  margin-top: 120px;
+  color:red;
+}
+.profilo{
+  border-radius: 10%;
+}
+
+.email{
+    border: 1px solid transparent;
+    margin-top: 250px;
+    margin-left: 46px;
+    text-align: center;
+    border-style: inset;
+    border-width: 0;
+}
+.password{
+    border: 1px solid transparent;
+    margin-top: 20px;
+    margin-left: 46px;
+    text-align: center;
+    border-style: inset;
+    border-width: 0;
+}
+
+
+.header-li{
+  border:1px solid black;
+  height: 121px;
+  width: 100%;
+  background-color:#014B01;
+
+}
+
+.appoggio_fa{
+  margin-left: 20px;
+  margin-top: 20px;
+  position: absolute;
+}
+
+
+.form-mail{
+  margin-top: 1px;
+  margin-left: 16px;
+  margin-right: 16px;
+  border: 1px solid green;
+}
+
+.form-password{
+  margin-top: 1px;
+  margin-left: 16px;
+  margin-right: 16px;
+  border: 1px solid green;
+}
+
+.logo_barra_sup{
+    margin: 0 auto;
+      margin-top: 1%;
+      width:123px;
+      height: 61px;
+}
