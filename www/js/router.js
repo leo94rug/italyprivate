@@ -4,10 +4,10 @@ define(function(require) {
   var Backbone = require("backbone");
   var MyModel = require("models/MyModel");
   var StructureView = require("views/StructureView");
-  var MyView = require("views/pages/MyView");
+  var MyPresentazione = require("views/pages/MyPresentazione");
   var MapView = require("views/pages/MapView");
-  var Myfile = require("views/pages/Myfile");
-  var AnteprimaView = require("views/AnteprimaView");
+  var MySelezione = require("views/pages/MySelezione");
+  var MyHomepage = require("views/pages/MyHomepage");
 
   var AppRouter = Backbone.Router.extend({
 
@@ -15,26 +15,23 @@ define(function(require) {
 
     routes: {
       // the default is the structure view
-      "": "anteprima",
-      "myview": "myView",
+      "": "showStructure",
+      "mypresentazione": "Mypresentazione",
       "map": "map",
-      "file1":"file1",
-      "homepage":"showStructure"
+      "myselezione": "myselezione",
+      "homepage": "homepage"
     },
 
-    firstView: "anteprima",
+    firstView: "mypresentazione",
 
-    anteprima: function(){
-      if (!this.anteprimaView) {
-        this.anteprimaView = new AnteprimaView();
-        // put the el element of the structure view into the DOM
-        document.body.appendChild(this.anteprimaView.render().el);
-        this.anteprimaView.trigger("inTheDOM");
-      }   
+    homepage: function(){
+      var page = new MyHomepage();
+      this.changePage(page);
+
     },
 
-    file1: function(){
-      var page = new Myfile();
+    myselezione: function(){
+      var page = new MySelezione();
       this.changePage(page);
     },
 
@@ -43,17 +40,9 @@ define(function(require) {
       this.currentView = undefined;
     },
 
-    myView: function() {
-      // highlight the nav1 tab bar element as the current one
-      this.structureView.setActiveTabBarElement("nav1");
-      // create a model with an arbitrary attribute for testing the template engine
-      var model = new MyModel({
-        key: "testValue"
-      });
+    Mypresentazione: function() {
       // create the view
-      var page = new MyView({
-        model: model
-      });
+      var page = new MyPresentazione();
       // show the view
       this.changePage(page);
     },

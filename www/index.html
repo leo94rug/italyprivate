@@ -12,17 +12,6 @@
     </head>
     <body> 
 
-    <div class="run" title="Run"></div>
-    	<script type="text/javascript">
-    	var object = {};
-
-        _.extend(object, Backbone.Events);
-
-        object.on("alert", function(msg) {
-            alert("Triggered " + msg);
-        });
-
-object.trigger("alert", "an event");</script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="lib/ratchet/js/ratchet.min.js"></script>
         <script data-main="js/main" src="lib/require/require.js"></script>

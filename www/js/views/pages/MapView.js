@@ -16,6 +16,7 @@ define(function(require) {
     },
 
     render: function() {
+            $("#menusup").show();
       return this;
     },
 

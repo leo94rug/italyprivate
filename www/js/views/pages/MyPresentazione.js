@@ -1,17 +1,16 @@
 define(function(require) {
 
   var Backbone = require("backbone");
+  var MyModel = require("models/MyModel");
   var Utils = require("utils");
 
-  var Myfile = Utils.Page.extend({
+  var MyPresentazione = Utils.Page.extend({
 
-    constructorName: "Myfile",
-    id: "file1",
-    className: "i-g page",
-
+    constructorName: "MyPresentazione",
+ 
     initialize: function() {
       // load the precompiled template
-      this.template = Utils.templates.file1;
+      this.template = Utils.templates.presentazione;
       // here we can register to inTheDOM or removing events
       // this.listenTo(this, "inTheDOM", function() {
       //   $('#content').on("swipe", function(data){
@@ -23,15 +22,26 @@ define(function(require) {
       // by convention, all the inner views of a view must be stored in this.subViews
     },
 
+    id: "mypresentazione",
+    className: "i-g page",
+
+    events: {
+      "tap #presentazione": "avanti"
+    },
 
     render: function() {
+      $("#menusup").hide();
       $(this.el).html(this.template());
       return this;
     },
 
-  
+    avanti: function(e) {
+      Backbone.history.navigate("myselezione", {
+        trigger: true
+      });
+    }
   });
 
-  return Myfile;
+  return MyPresentazione;
 
 });

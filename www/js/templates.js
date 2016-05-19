@@ -10,7 +10,7 @@
 //  - value: the path of the html file containing the HTML fragment of the template
 define({
     structure: "templates/structure.html",
-    myview: "templates/myview.html",
-    file1: "templates/file.html",
-    anteprima: "templates/caricamento.html"
+    presentazione: "templates/presentazione.html",
+    myselezione: "templates/selezione.html",
+    homepage: "templates/homepage.html"
 });

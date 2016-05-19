@@ -77,8 +77,7 @@ body {
   width: 100%;
   background-color: yellow;
 }
-#loading {
-    height: :100%;
-  width: 100%;
-  background-color: red;
+
+.prova02 {
+  display: inline;
 }
